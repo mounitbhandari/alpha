@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   radius: number;
   color: string;
   images = [1, 2, 3, 4, 5, 6].map((n) => `assets/carousel/carousel_${n}.jpg`);
-  videoUrl = 'https://www.youtube.com/embed/ftf9ZkhD018';
+  videoUrl = 'https://www.youtube.com/embed/_8kT9xbq5Vk';
   public safeURL: SafeResourceUrl;
   constructor(private httpClient: HttpClient, private _sanitizer: DomSanitizer) {
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
