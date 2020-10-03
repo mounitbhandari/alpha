@@ -7,8 +7,26 @@
       <iframe [src]='safeURL' width="560" height="315" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-  <div fxFlex="60" style="background-color: rgba(3,2,12,0.81);">
+  <div fxFlex="60" style="background-color: rgba(197,195,198,0.81);">
+    <h4>Basic native select</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Cars</mat-label>
+      <select matNativeControl required>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </mat-form-field>
 
+    <ng-select [items]="people$ | async"
+               bindLabel="name"
+               autofocus
+               bindValue="id"
+               [(ngModel)]="selectedPersonId">
+    </ng-select>
+
+    <br/>Selected: {{selectedPersonId}}
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 .cards {
   overflow: auto;
@@ -26,6 +26,19 @@
   //margin: 5px;
 }
 
+
 ngb-carousel{
   margin: 5px;
 }
+
+
+
+
+ .ng-dropdown-panel .scroll-host {
+   -webkit-overflow-scrolling: touch;
+   display: block;
+   overflow: hidden;
+   overflow-y: auto;
+   position: relative;
+   background-color: #2e2e2e !important;
+ }
