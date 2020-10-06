@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
   }
 //https://formspree.io
   onSubmit(contactForm: NgForm) {
+    alert("sending mail");
     if (contactForm.valid) {
       const email = contactForm.value;
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
