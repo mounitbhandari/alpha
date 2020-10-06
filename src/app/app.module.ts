@@ -23,7 +23,6 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AuthComponent } from './pages/auth/auth.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 import {AuthInterceptorInterceptor} from './services/auth-interceptor.interceptor';
-import { OwnerComponent } from './pages/owner/owner.component';
 import {NgxPrintModule} from 'ngx-print';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {NgxPaginationModule} from 'ngx-pagination';
@@ -35,16 +34,9 @@ import { LoaidngHourglassComponent } from './shared/loaidng-hourglass/loaidng-ho
 import { LoaidngRollerComponent } from './shared/loaidng-roller/loaidng-roller.component';
 import { DateAdapter } from '@angular/material/core';
 import { DateFormat } from './date-format';
-import { ReceiveComponent } from './pages/receive/receive.component';
-import { PaymentComponent } from './pages/payment/payment.component';
-import { TransactionReportComponent } from './pages/transaction-report/transaction-report.component';
-import { IncomeExpenditureComponent } from './pages/income-expenditure/income-expenditure.component';
-import { IncomeExpenditureHomeComponent } from './pages/income-expenditure/income-expenditure-home/income-expenditure-home.component';
-import { IncomeExpenditureByYearComponent } from './pages/income-expenditure/income-expenditure-by-year/income-expenditure-by-year.component';
-import { IncomeExpenditureByMonthComponent } from './pages/income-expenditure/income-expenditure-by-month/income-expenditure-by-month.component';
-import { LedgerComponent } from './pages/ledger/ledger.component';
-import { CashBookComponent } from './pages/cash-book/cash-book.component';
-import { CashBookHomeComponent } from './pages/cash-book/cash-book-home/cash-book-home.component';
+import { TestimonyComponent } from './pages/home/testimony/testimony.component';
+import { ContactComponent } from './pages/contact/contact.component';
+
 
 
 
@@ -56,23 +48,14 @@ import { CashBookHomeComponent } from './pages/cash-book/cash-book-home/cash-boo
     PictureCarouselComponent,
     AuthComponent,
     LoadingSpinnerComponent,
-    OwnerComponent,
     SncakBarComponent,
     ConfirmationDialogComponent,
     LoaidngRippleComponent,
     LoaidngEllipsisComponent,
     LoaidngHourglassComponent,
     LoaidngRollerComponent,
-    ReceiveComponent,
-    PaymentComponent,
-    TransactionReportComponent,
-    IncomeExpenditureComponent,
-    IncomeExpenditureHomeComponent,
-    IncomeExpenditureByYearComponent,
-    IncomeExpenditureByMonthComponent,
-    LedgerComponent,
-    CashBookComponent,
-    CashBookHomeComponent,
+    TestimonyComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
