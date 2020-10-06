@@ -4,32 +4,31 @@
         <div class="row m-2 p-2">
             <div class="example-container ">
                 <mat-form-field  appearance="fill" style="width: 1000px;"  >
-                    <mat-label >Name</mat-label>
+                    <mat-label >Name <fa-icon [icon]="person"></fa-icon></mat-label>
                     <input matInput type="text"  placeholder="Name" name="name" ngModel required #name="ngModel">
                 </mat-form-field>
                 <br>
                 <mat-form-field appearance="fill" style="width: 1000px;">
                     <mat-label>
-                        Enter your email
-                        <span class="material-icons">
-                            email
-                        </span>
+                        Enter your email <fa-icon [icon]="faEnvelope"></fa-icon>
                     </mat-label>
                     <input matInput type="text" placeholder="Email" email name="email" ngModel required #email="ngModel">
                 </mat-form-field>
                 <br>
                 <mat-form-field appearance="fill" style="width: 1000px;">
-                    <mat-label>Enter your message here</mat-label>
+                    <mat-label>
+                      Enter your message here <fa-icon [icon]="faAtom"></fa-icon>
+                    </mat-label>
                     <textarea matInput placeholder="Messages" name="messages" ngModel required #messages="ngModel"></textarea>
                 </mat-form-field>
-                
+
             </div>
         </div>
         <div class="row ml-4">
             <input class="ml-2 btn btn-primary"  type="submit" value="Send">
         </div>
     </form>
-    
+
 </div>
 
 <div class="row">
@@ -38,17 +37,23 @@
 
 <div class="row">
     <div class="col">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><h1>Mounita Bhandari</h1><br><a id="twitter-button" class="btn  btn-twitter bg-info "></a><a href="https://twitter.com/iammounita/photo" class="fa fa-twitter"><h3 id="t-button">click here</h3></a></h5><br>
-
-
-
-              <!-- <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-              <!-- <a href="#" class="btn btn-primary">Go Twitter</a> -->
-            </div>
-        </div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Mounita Bhandari</mat-card-title>
+          <mat-card-subtitle>Project Leader</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg" alt="Photo of M. Bhandari">
+        <mat-card-content>
+          <p>
+            She is our project leader, she design project and maintain it, she can work on different types of programming languages
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button><fa-icon [icon]="twitter" style="color: dodgerblue;"></fa-icon> @iammounita</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
     <div class="col">
         <div class="card" style="width: 18rem;">
