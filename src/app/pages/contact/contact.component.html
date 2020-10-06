@@ -3,14 +3,22 @@
 
 </div>
 <div class="row">
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <input type="text" placeholder="Name" name="name" ngModel required #name="ngModel">
+    <input type="text" placeholder="Email" email name="email" ngModel required #email="ngModel">
+    <textarea placeholder="Messages" name="messages" ngModel required #messages="ngModel"></textarea>
+    <input type="submit" value="Send">
+  </form>
+</div>
+<div class="row">
     <div class="col">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title"><h1>Mounita Bhandari</h1><br><a id="twitter-button" class="btn  btn-twitter bg-info "></a><a href="https://twitter.com/iammounita/photo" class="fa fa-twitter"><h3 id="t-button">click here</h3></a></h5><br>
-              
-                
-              
+
+
+
               <!-- <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
               <!-- <a href="#" class="btn btn-primary">Go Twitter</a> -->
             </div>
@@ -36,7 +44,7 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 
 
