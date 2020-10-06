@@ -1,15 +1,41 @@
 
+<div class="container m-2 mb-4 mt-2 p-2 " style="background-color: antiquewhite; ">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
+        <div class="row m-2 p-2">
+            <div class="example-container ">
+                <mat-form-field  appearance="fill" style="width: 1000px;"  >
+                    <mat-label >Name</mat-label>
+                    <input matInput type="text"  placeholder="Name" name="name" ngModel required #name="ngModel">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" style="width: 1000px;">
+                    <mat-label>
+                        Enter your email
+                        <span class="material-icons">
+                            email
+                        </span>
+                    </mat-label>
+                    <input matInput type="text" placeholder="Email" email name="email" ngModel required #email="ngModel">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" style="width: 1000px;">
+                    <mat-label>Enter your message here</mat-label>
+                    <textarea matInput placeholder="Messages" name="messages" ngModel required #messages="ngModel"></textarea>
+                </mat-form-field>
+                
+            </div>
+        </div>
+        <div class="row ml-4">
+            <input class="ml-2 btn btn-primary"  type="submit" value="Send">
+        </div>
+    </form>
+    
+</div>
+
 <div class="row">
 
 </div>
-<div class="row">
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <input type="text" placeholder="Name" name="name" ngModel required #name="ngModel">
-    <input type="text" placeholder="Email" email name="email" ngModel required #email="ngModel">
-    <textarea placeholder="Messages" name="messages" ngModel required #messages="ngModel"></textarea>
-    <input type="submit" value="Send">
-  </form>
-</div>
+
 <div class="row">
     <div class="col">
         <div class="card" style="width: 18rem;">
@@ -36,7 +62,7 @@
     </div>
     <div class="col">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://live.staticflickr.com/65535/50423189831_e61866e9d3.jpg">
+            <img class="card-img-top" src="https://live.staticflickr.com/65535/50426613873_1a28015ebc.jpg">
             <div class="card-body">
               <h5 class="card-title"><h1>Ritaja Ghosh</h1></h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
