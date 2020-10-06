@@ -36,4 +36,8 @@ export class ContactComponent implements OnInit {
       );
     }
   }
+
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
 }
