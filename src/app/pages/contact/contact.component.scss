@@ -10,7 +10,22 @@
   #t-button{
     color: black;
   }
-.example-header-image {
+.example-header-image-mounita {
   background-image: url('https://live.staticflickr.com/65535/50428866602_46d4c90467_t.jpg');
   background-size: cover;
 }
+.example-header-image-mou {
+  background-image: url('https://live.staticflickr.com/65535/50429491113_65d8e59b62_t.jpg');
+  background-size: cover;
+}
+.example-header-image-ritaja {
+  background-image: url('https://live.staticflickr.com/65535/50430195681_31dd7a8450_t.jpg');
+  background-size: cover;
+}
+
+.form-container{
+  background: linear-gradient(90deg, rgba(226, 221, 225, 0.56) 0%, rgba(247, 253, 228, 0.91) 35%, rgb(197, 195, 198) 80%);
+  border-radius: 10px;
+  box-shadow: 5px 10px rgba(50,50,50,.2);
+}
+

@@ -1,45 +1,49 @@
 
-<div class="container m-2 mb-4 mt-2 p-2 " style="background-color: antiquewhite; ">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
-        <div class="row m-2 p-2">
-            <div class="example-container ">
-                <mat-form-field  appearance="fill" style="width: 1000px;"  >
+<div fxLayout="row" fxLayoutAlign="space-evenly stretch" style="padding-top: 20px; padding-bottom: 20px; background-color: #2a95e8;">
+  <div fxLayout="row" fxFlex="50" fxLayoutAlign="space-between center" class="form-container m-5 p-3">
+    <form fxFlex="100"#contactForm="ngForm" >
+        <div fxLayout="column" fxLayoutAlign="space-between">
+            <div fxLayout="column" fxLayoutAlign="space-between">
+                <mat-form-field>
                     <mat-label >Name <fa-icon [icon]="person"></fa-icon></mat-label>
-                    <input matInput type="text"  placeholder="Name" name="name" ngModel required #name="ngModel">
+                    <input fxFlex="60" matInput type="text"  placeholder="Name" name="name" ngModel required #name="ngModel">
                 </mat-form-field>
-                <br>
-                <mat-form-field appearance="fill" style="width: 1000px;">
+                <mat-form-field  style="">
                     <mat-label>
                         Enter your email <fa-icon [icon]="faEnvelope"></fa-icon>
                     </mat-label>
                     <input matInput type="text" placeholder="Email" email name="email" ngModel required #email="ngModel">
                 </mat-form-field>
-                <br>
-                <mat-form-field appearance="fill" style="width: 1000px;">
+                <mat-form-field  style="">
                     <mat-label>
                       Enter your message here <fa-icon [icon]="faAtom"></fa-icon>
                     </mat-label>
                     <textarea matInput placeholder="Messages" name="messages" ngModel required #messages="ngModel"></textarea>
                 </mat-form-field>
-
+            </div>
+            <div fxLayout="row" fxLayoutAlign="end center">
+              <button class="btn btn-primary" [disabled]="contactForm.invalid"  (click)="onSubmit(contactForm)" type="button" >
+                Send Mail <fa-icon [icon]="faEnvelope"></fa-icon>
+              </button>
             </div>
         </div>
-        <div class="row ml-4">
-            <input class="ml-2 btn btn-primary"  type="submit" value="Send">
-        </div>
-    </form>
 
+    </form>
+  </div>
+  <div fxLayout="row" fxFlex="50" fxLayoutAlign="space-between center" class="form-container m-5 p-3">
+    This right area
+  </div>
 </div>
 
 <div class="row">
 
 </div>
 
-<div fxLayout="row" fxLayoutAlign="space-around center" >
-    <div class="col m-5">
+<div fxLayout="row" fxLayoutAlign="space-evenly center" style="padding-top: 20px; padding-bottom: 20px; background-color: #dce815;">
+    <div class="col" fxFlex="20">
       <mat-card class="example-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
+          <div mat-card-avatar class="example-header-image-mounita"></div>
           <mat-card-title>Mounita Bhandari</mat-card-title>
           <mat-card-subtitle>Project Leader</mat-card-subtitle>
         </mat-card-header>
@@ -51,18 +55,19 @@
         </mat-card-content>
         <mat-card-actions>
           <button mat-button (click)="goToLink('https://twitter.com/iammounita')"><fa-icon [icon]="twitter" style="color: dodgerblue;"></fa-icon> @iammounita</button>
-          <button mat-button>SHARE</button>
+          <button mat-button (click)="goToLink('https://www.flickr.com/photos/190461213@N05/')"><fa-icon [icon]="flicker" style="color: dodgerblue;"></fa-icon> Flicker</button>
+          <button mat-button (click)="goToLink('https://www.facebook.com/profile.php?id=100013659720565')"><fa-icon [icon]="facebook" style="color: dodgerblue;"></fa-icon> FB</button>
         </mat-card-actions>
       </mat-card>
     </div>
-    <div class="col m-5">
+    <div class="col" fxFlex="20">
       <mat-card class="example-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Mounita Bhandari</mat-card-title>
-          <mat-card-subtitle>Project Leader</mat-card-subtitle>
+          <div mat-card-avatar class="example-header-image-ritaja"></div>
+          <mat-card-title>Ritaja Ghosh</mat-card-title>
+          <mat-card-subtitle>Developer</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg" alt="Photo of M. Bhandari">
+        <img mat-card-image src="https://live.staticflickr.com/65535/50426613873_1a28015ebc.jpg" alt="Photo of R. Ghosh">
         <mat-card-content>
           <p>
             She is our project leader, she design project and maintain it, she can work on different types of programming languages
@@ -74,14 +79,14 @@
         </mat-card-actions>
       </mat-card>
     </div>
-    <div class="col m-5">
+    <div class="col" fxFlex="20">
       <mat-card class="example-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Mounita Bhandari</mat-card-title>
-          <mat-card-subtitle>Project Leader</mat-card-subtitle>
+          <div mat-card-avatar class="example-header-image-mou"></div>
+          <mat-card-title>Mou Podder</mat-card-title>
+          <mat-card-subtitle>Designer</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg" alt="Photo of M. Bhandari">
+        <img mat-card-image src="https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg" alt="Photo of M. Podder">
         <mat-card-content>
           <p>
             She is our project leader, she design project and maintain it, she can work on different types of programming languages

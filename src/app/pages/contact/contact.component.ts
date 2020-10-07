@@ -3,9 +3,12 @@ import {NgForm} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { faCoffee} from '@fortawesome/free-solid-svg-icons/faCoffee';
 import { faTwitter} from '@fortawesome/free-brands-svg-icons/faTwitter';
-import { faPersonBooth } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import { faAtom} from '@fortawesome/free-solid-svg-icons/faAtom';
+import { faFlickr} from '@fortawesome/free-brands-svg-icons/faFlickr';
+import { faFacebook} from '@fortawesome/free-brands-svg-icons';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -14,16 +17,17 @@ import { faAtom} from '@fortawesome/free-solid-svg-icons/faAtom';
 })
 export class ContactComponent implements OnInit {
   twitter = faTwitter;
-  person = faPersonBooth;
+  person = faUser;
   faEnvelope = faEnvelope;
   faAtom = faAtom;
+  flicker = faFlickr;
+  facebook = faFacebook;
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 // https://formspree.io
   onSubmit(contactForm: NgForm) {
-    alert('sending mail');
     if (contactForm.valid) {
       const email = contactForm.value;
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
@@ -32,6 +36,14 @@ export class ContactComponent implements OnInit {
         { headers: headers }).subscribe(
         response => {
           console.log(response);
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Mail Sent',
+            showConfirmButton: false,
+            timer: 3000
+          }).then(r => {
+          });
         }
       );
     }
