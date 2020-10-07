@@ -31,19 +31,20 @@ export class ContactComponent implements OnInit {
     if (contactForm.valid) {
       const email = contactForm.value;
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+      contactForm.resetForm(); // or form.reset();
       this.http.post('https://formspree.io/f/mdopagwk',
         { name: email.name, replyto: email.email, message: email.messages },
         { headers: headers }).subscribe(
         response => {
-          console.log(response);
-          Swal.fire({
+
+        Swal.fire({
             position: 'top-end',
             icon: 'success',
             title: 'Mail Sent',
             showConfirmButton: false,
             timer: 3000
-          }).then(r => {
-          });
+        }).then(r => {
+        });
         }
       );
     }
