@@ -5,18 +5,25 @@
       <div fxLayout="row">
         <button mat-button >
           <mat-icon>home</mat-icon>
-          <span class="logo">Accounts</span>
+          <span class="logo">{{projectName}}</span>
         </button>
         <div *ngIf="!deviceXs">
           <button mat-button
                   [routerLink]="['/']"
                   routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Home</button>
+                  [routerLinkActiveOptions]="{exact: true}">Home
+          </button>
+          <button mat-button
+                  [routerLink]="['/gallery']"
+                  routerLinkActive="MyActiveMenu"
+                  [routerLinkActiveOptions]="{exact: true}">Gallery
+          </button>
           <button mat-button >About Us</button>
           <button mat-button
                   [routerLink]="['/contactUs']"
                   routerLinkActive="MyActiveMenu"
-                  [routerLinkActiveOptions]="{exact: true}">Contact Us</button>
+                  [routerLinkActiveOptions]="{exact: true}">Contact Us
+          </button>
         </div>
 
 
