@@ -36,6 +36,8 @@ import { DateAdapter } from '@angular/material/core';
 import { DateFormat } from './date-format';
 import { TestimonyComponent } from './pages/home/testimony/testimony.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { VideoComponent } from './pages/video/video.component';
 
 
 
@@ -55,7 +57,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     LoaidngHourglassComponent,
     LoaidngRollerComponent,
     TestimonyComponent,
-    ContactComponent
+    ContactComponent,
+    GalleryComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
