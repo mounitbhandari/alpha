@@ -9,6 +9,8 @@ import { faAtom} from '@fortawesome/free-solid-svg-icons/faAtom';
 import { faFlickr} from '@fortawesome/free-brands-svg-icons/faFlickr';
 import { faFacebook} from '@fortawesome/free-brands-svg-icons';
 import Swal from 'sweetalert2';
+import {MatDialog} from '@angular/material/dialog';
+import {ContactDialogComponent} from './contact-dialog/contact-dialog.component';
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +24,7 @@ export class ContactComponent implements OnInit {
   faAtom = faAtom;
   flicker = faFlickr;
   facebook = faFacebook;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -52,5 +54,17 @@ export class ContactComponent implements OnInit {
 
   goToLink(url: string) {
     window.open(url, '_blank');
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(ContactDialogComponent, {
+      data: {
+        animal: 'panda',
+        image: 'https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg'
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }
