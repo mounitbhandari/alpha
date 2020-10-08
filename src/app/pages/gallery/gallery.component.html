@@ -1,49 +1,13 @@
 <div class="container p-4" fxLayout="column" fxLayout.md="row" fxLayoutGap="20px" >
-  <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >
-    <div fxFlex.lt-md="100" fxFlex="25" >
-      <a [routerLink]="" (click)="openDialog(pictures[0])">
-        <img class="img-fluid" src="{{pictures[0].medium1}}">
+  <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row" fxLayoutAligmnet="center center" fxLayoutGap="2px" >
+             
+  </div>
+  <div class="cardWrap" *ngFor="let row of pictures" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row"  fxLayoutAligmnet="center center" fxLayoutGap="5px" >
+    <div *ngFor="let picture of row">
+      <a [routerLink]="" (click)="openDialog(picture)">
+        <img class="img-fluid" src="{{picture.medium1}}">
       </a>
     </div>
-    <div fxFlex.lt-md="100" fxFlex="25" >
-      <img class="img-fluid" src="https://live.staticflickr.com/65535/50432733692_f7b6d655c5.jpg">
-    </div>
-    <div fxFlex.lt-md="100" fxFlex="25" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50432558366_2d3419bf5b.jpg">
-    </div>
-    <div fxFlex.lt-md="100" fxFlex="25" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50432539351_08aede6377.jpg">
-    </div>
-  </div>
-  <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column" fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >
-    <div fxFlex.lt-md="100" fxFlex="35" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50432696802_95ca2f9471.jpg">
-
-    </div>
-    <div fxFlex.lt-md="100" fxFlex="35" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50431853158_ee40054453.jpg">
-    </div>
-    <div fxFlex.lt-md="100" fxFlex="35" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50432596251_f0d3399be4.jpg">
-    </div>
-  </div>
-  <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column" fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >
-    <div fxFlex.lt-md="100" fxFlex="25" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50431867593_8c6e453939.jpg">
-
-    </div>
-    <div fxFlex.lt-md="100" fxFlex="25" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50432540676_fdb639af4e.jpg">
-    </div>
-    <div fxFlex.lt-md="100" fxFlex="25" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50432565301_30c8f54389.jpg">
-    </div>
-    <div fxFlex.lt-md="100" fxFlex="25" >
-        <img class="img-fluid" src="https://live.staticflickr.com/65535/50431863448_ca31535ca8.jpg">
-    </div>
-  </div>
-  <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row" fxLayoutAlign="center center">
-      <img class="img-fluid" src="https://live.staticflickr.com/65535/50433014587_d0b595f19a_c.jpg">
   </div>
 </div>
 

@@ -10,12 +10,13 @@ import {Picture} from '../../models/picture.model';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  pictures: Picture[]
+  pictures: Picture[]=[];
   constructor(public dialog: MatDialog, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('assets/gallery.json').subscribe((data: Picture[]) => {
       this.pictures = data;
+      console.log(this.pictures);
     });
   }
 
