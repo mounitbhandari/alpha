@@ -39,6 +39,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { VideoComponent } from './pages/video/video.component';
 import { ContactDialogComponent } from './pages/contact/contact-dialog/contact-dialog.component';
+import { GalleryDialogComponent } from './pages/gallery/gallery-dialog/gallery-dialog.component';
 
 
 
@@ -61,7 +62,8 @@ import { ContactDialogComponent } from './pages/contact/contact-dialog/contact-d
     ContactComponent,
     GalleryComponent,
     VideoComponent,
-    ContactDialogComponent
+    ContactDialogComponent,
+    GalleryDialogComponent
   ],
   imports: [
     BrowserModule,

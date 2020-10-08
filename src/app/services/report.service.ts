@@ -4,7 +4,7 @@ import {GlobalVariable} from '../shared/global';
 import {catchError, tap} from 'rxjs/operators';
 import {Ledger} from '../models/ledger.model';
 import {of, Subject, throwError} from 'rxjs';
-import {TransactionYear} from '../models/transaction-year.model';
+import {TransactionYear} from '../models/picture.model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Route, Router} from '@angular/router';
 import {AuthService} from './auth.service';

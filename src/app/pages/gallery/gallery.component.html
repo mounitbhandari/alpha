@@ -1,7 +1,9 @@
 <div class="container p-4" fxLayout="column" fxLayout.md="row" fxLayoutGap="20px" >
   <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row" fxFlex.md="50" fxLayoutAligmnet="space-between center" fxLayoutGap="20px" >
     <div fxFlex.lt-md="100" fxFlex="25" >
-      <img class="img-fluid" src="https://live.staticflickr.com/65535/50431863823_e23e1717eb.jpg">
+      <a [routerLink]="" (click)="openDialog(pictures[0])">
+        <img class="img-fluid" src="{{pictures[0].medium1}}">
+      </a>
     </div>
     <div fxFlex.lt-md="100" fxFlex="25" >
       <img class="img-fluid" src="https://live.staticflickr.com/65535/50432733692_f7b6d655c5.jpg">

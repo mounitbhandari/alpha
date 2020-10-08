@@ -1,5 +1,3 @@
-<button mat-button (click)="openDialog()">Open dialog</button>
-
 <div fxLayout="row" fxLayoutAlign="space-evenly stretch" style="padding-top: 20px; padding-bottom: 20px; background-color: #2a95e8;">
   <div fxLayout="row" fxFlex="50" fxLayoutAlign="space-between center" class="form-container m-5 p-3">
     <form fxFlex="100"#contactForm="ngForm" >
@@ -89,7 +87,7 @@
           <mat-card-title>Mou Podder</mat-card-title>
           <mat-card-subtitle>Designer</mat-card-subtitle>
         </mat-card-header>
-          <a href="#" (click)="openDialog()">
+          <a [routerLink]="" (click)="openDialog()">
             <img mat-card-image src="https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg" alt="Photo of M. Podder">
           </a>
         <mat-card-content>
