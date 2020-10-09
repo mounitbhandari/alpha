@@ -10,7 +10,7 @@ import {Picture} from '../../models/picture.model';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  pictures: Picture[]=[];
+  pictures: Picture[] = [];
   constructor(public dialog: MatDialog, private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -22,7 +22,9 @@ export class GalleryComponent implements OnInit {
 
   openDialog(picture) {
     const dialogRef = this.dialog.open(GalleryDialogComponent, {
-      data: picture
+      data: picture,
+      panelClass: 'my-panel',
+      backdropClass: 'backdropBackground'
     });
 
     dialogRef.afterClosed().subscribe(result => {
