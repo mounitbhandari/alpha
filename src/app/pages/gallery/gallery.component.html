@@ -1,8 +1,8 @@
 
 
 <div class="container p-4" fxLayout="column" fxLayout.md="row" fxLayoutGap="5px" fxFlexAlign="center">
-  <div class="cardWrap" *ngFor="let row of pictures" fxLayoutGap="5px" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row"  fxFlexAlign="center"  >
-    <div *ngFor="let picture of row">
+  <div class="cardWrap" *ngFor="let row of pictures" fxLayoutGap="5px" fxLayout.lt-md="column" fxLayout.md="column"  fxLayout="row"  fxFlexAlign="space-between center"  >
+    <div *ngFor="let picture of row" class="picture-div"  fxFlexAlign="center center" fxFlex="fill" fxLayout="row">
       <a [routerLink]="" (click)="openDialog(picture)">
         <img class="img-fluid" src="{{picture.medium1}}">
       </a>
