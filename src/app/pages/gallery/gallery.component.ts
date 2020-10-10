@@ -24,7 +24,8 @@ export class GalleryComponent implements OnInit {
     const dialogRef = this.dialog.open(GalleryDialogComponent, {
       data: picture,
       panelClass: 'my-panel',
-      backdropClass: 'backdropBackground'
+      backdropClass: 'backdropBackground',
+      maxHeight: '90vh'
     });
 
     dialogRef.afterClosed().subscribe(result => {
