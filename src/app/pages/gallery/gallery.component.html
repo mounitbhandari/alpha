@@ -6,7 +6,7 @@
 <ul>
   <li class="m-1" *ngFor="let picture of pictures">
     <a [routerLink]="" (click)="openDialog(picture)">
-        <img src="{{picture.medium1}}" alt="A Toyota Previa covered in graffiti" loading="lazy">
+        <img src="{{picture.medium1}}" alt="We love you সিপুদি!!!" loading="lazy" *ngIf="picture.medium1.length>0">
     </a>
   </li>
   <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
