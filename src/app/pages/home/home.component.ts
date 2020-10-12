@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
@@ -18,10 +18,9 @@ export class HomeComponent implements OnInit {
   radius: number;
   color: string;
   images = [1, 2, 3, 4, 5, 6].map((n) => `assets/carousel/carousel_${n}.jpg`);
-  videoUrl = 'https://www.youtube.com/embed/_8kT9xbq5Vk';
-  public safeURL: SafeResourceUrl;
-  constructor(private httpClient: HttpClient, private _sanitizer: DomSanitizer) {
-    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
+  
+  constructor(private httpClient: HttpClient) {
+    
   }
 
   ngOnInit(){
