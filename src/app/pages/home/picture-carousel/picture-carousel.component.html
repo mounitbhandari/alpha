@@ -1,8 +1,7 @@
-<ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+<ngb-carousel #carousel [interval]="3000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
   <ng-template ngbSlide *ngFor="let img of pictures; index as i">
     <div class="carousel-caption">
-<!--      <h3>My slide {{i + 1}} title</h3>-->
-      <h3>{{img.comment}} </h3>
+      <h1>{{img.comment}} </h1>
     </div>
     <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
       <div class="picsum-img-wrapper">

@@ -17,7 +17,7 @@ export class PictureCarouselComponent implements OnInit{
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
-  pauseOnHover = true;
+  pauseOnHover = false;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
   constructor(private http: HttpClient) { }
