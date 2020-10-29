@@ -23,7 +23,11 @@ n<div class="navbar">
                   routerLinkActive="MyActiveMenu"
                   [routerLinkActiveOptions]="{exact: true}">Video
           </button>
-          <button mat-button >About Us</button>
+          <button mat-button
+                  [routerLink]="['/testimony']"
+                  routerLinkActive="MyActiveMenu"
+                  [routerLinkActiveOptions]="{exact: true}">testimony
+          </button>
           <button mat-button
                   [routerLink]="['/contactUs']"
                   routerLinkActive="MyActiveMenu"

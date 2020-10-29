@@ -6,6 +6,7 @@ import {AuthGuardService} from './services/auth-guard.service';
 import { ContactComponent } from './pages/contact/contact.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { VideoComponent } from './pages/video/video.component';
+import {TestimonyComponent} from './pages/testimony/testimony.component';
 
 
 // @ts-ignore
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'auth', component: AuthComponent},
   {path: 'contactUs', component: ContactComponent},
   {path: 'gallery', component: GalleryComponent},
-  {path: 'video', component: VideoComponent}
+  {path: 'video', component: VideoComponent},
+  {path: 'testimony', component: TestimonyComponent}
 ];
 
 @NgModule({
