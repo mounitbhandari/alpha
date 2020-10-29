@@ -34,12 +34,12 @@ import { LoaidngHourglassComponent } from './shared/loaidng-hourglass/loaidng-ho
 import { LoaidngRollerComponent } from './shared/loaidng-roller/loaidng-roller.component';
 import { DateAdapter } from '@angular/material/core';
 import { DateFormat } from './date-format';
-import { TestimonyComponent } from './pages/home/testimony/testimony.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { VideoComponent } from './pages/video/video.component';
 import { ContactDialogComponent } from './pages/contact/contact-dialog/contact-dialog.component';
 import { GalleryDialogComponent } from './pages/gallery/gallery-dialog/gallery-dialog.component';
+import { TestimonyComponent } from './pages/testimony/testimony.component';
 
 
 
@@ -58,12 +58,12 @@ import { GalleryDialogComponent } from './pages/gallery/gallery-dialog/gallery-d
     LoaidngEllipsisComponent,
     LoaidngHourglassComponent,
     LoaidngRollerComponent,
-    TestimonyComponent,
     ContactComponent,
     GalleryComponent,
     VideoComponent,
     ContactDialogComponent,
-    GalleryDialogComponent
+    GalleryDialogComponent,
+    TestimonyComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { VideoComponent } from './pages/video/video.component';
 import {TestimonyComponent} from './pages/testimony/testimony.component';
 
 
+
 // @ts-ignore
 const routes: Routes = [
   {path: '', component: HomeComponent},
