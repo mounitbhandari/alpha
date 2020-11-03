@@ -1,3 +1,37 @@
+
+
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly start" layout-wrap="" fxLayoutGap="2px">
+    <mat-card fxFlex="32" class="comment-card m-2" *ngFor="let comment of comments">
+      <mat-card-header>
+        <div mat-card-avatar  class="example-header-image"></div>
+        <mat-card-title *ngIf="comment.type==='message'">{{comment.title}}</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="comment.type==='picture'">
+          <img class="message-image img-fluid" src="https://live.staticflickr.com/65535/50558436608_fd89e6b677.jpg">
+        </div>
+        <p *ngIf="comment.type==='message'">
+          {{comment.message}}
+        </p>
+        <p *ngIf="comment.type==='picture'">
+          {{comment.message}}
+        </p>
+        <div class="sender" fxLayout="column" fxLayoutAlign="center end">
+          <div *ngIf="comment.type==='message'"> -- {{comment.sender}}</div>
+          <div *ngIf="comment.type==='message'"   class="comment-image">
+            <img  src="assets/images/{{comment.image}}" width="50px" alt="NONE" >
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+
+      </mat-card-actions>
+    </mat-card>
+</div>
+
+
+
 <div fxLayout="row" fxLayoutAlign="space-evenly center" class="developer-div" style="padding-top: 20px; padding-bottom: 20px;">
   <div id="left" class="col" fxFlex="20">
     <i>শুভ জন্মদিন শ্রীপর্ণা দিদি। প্রথমেই জানাই জন্মদিনের অনেক শুভেচ্ছা, ভালোবাসা। খুব ভালো থাকো। 😃

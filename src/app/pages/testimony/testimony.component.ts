@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Picture} from '../../models/picture.model';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-testimony',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimony.component.scss']
 })
 export class TestimonyComponent implements OnInit {
-
-  constructor() { }
+  comments: any ;
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('assets/comments.json').subscribe((data: any[]) => {
+      this.comments = data;
+      console.log(this.comments);
+    });
   }
 
 }
