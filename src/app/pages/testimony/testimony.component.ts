@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class TestimonyComponent implements OnInit {
   comments: any ;
+  x=50;
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {

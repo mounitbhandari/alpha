@@ -1,26 +1,25 @@
 
 
 <div fxLayout="row wrap" fxLayoutAlign="space-evenly start" layout-wrap="" fxLayoutGap="2px">
-    <mat-card fxFlex="32" class="comment-card m-2" *ngFor="let comment of comments">
+    <mat-card [fxFlex]="'comment.width'" class="comment-card m-2" *ngFor="let comment of comments">
       <mat-card-header>
         <div mat-card-avatar  class="example-header-image"></div>
         <mat-card-title *ngIf="comment.type==='message'">{{comment.title}}</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
+        </mat-card-header>
       <mat-card-content>
         <div *ngIf="comment.type==='picture'">
-          <img class="message-image img-fluid" src="https://live.staticflickr.com/65535/50558436608_fd89e6b677.jpg">
+          <img class="message-image img-fluid" src="{{comment.picture}}">
         </div>
         <p *ngIf="comment.type==='message'">
-          {{comment.message}}
+          <i><b>{{comment.message}}</b></i>
         </p>
         <p *ngIf="comment.type==='picture'">
           {{comment.message}}
         </p>
         <div class="sender" fxLayout="column" fxLayoutAlign="center end">
-          <div *ngIf="comment.type==='message'"> -- {{comment.sender}}</div>
+          <div *ngIf="comment.type==='message'"> <b class="sender">-- {{comment.sender}}</b></div>
           <div *ngIf="comment.type==='message'"   class="comment-image">
-            <img  src="assets/images/{{comment.image}}" width="50px" alt="NONE" >
+            <img  src="assets/images/{{comment.image}}" width="70px" alt="NONE" >
           </div>
         </div>
       </mat-card-content>
