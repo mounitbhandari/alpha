@@ -7,22 +7,23 @@
         <div mat-card-avatar  class="example-header-image"></div>
         <mat-card-title *ngIf="comment.type==='picture'">{{comment.title}}</mat-card-title>
         </mat-card-header>
-      <mat-card-content>
+      <mat-card-content fxLayout="column" fxLayoutAlign="center center">
         <div *ngIf="comment.type==='picture'">
           <img class="message-image img-fluid" src="{{comment.picture}}">
         </div>
         <div *ngIf="comment.type==='message'">
-          <p>
-          <span class="quotation-left">&#8220;</span>
+          <blockquote>
           {{comment.message}}
-          <span class="quotation-right">&#8221;</span>
-          </p>
+          </blockquote>
         </div>
         <p *ngIf="comment.type==='picture'">
           {{comment.message}}
         </p>
-        <div class="sender" fxLayout="column" fxLayoutAlign="center end">
-          <div *ngIf="comment.type==='message'"> <b class="sender">-- {{comment.sender}}</b></div>
+        <div class="sender" fxLayout="column" fxFill fxLayoutAlign="center end">
+          <div *ngIf="comment.type==='message'">
+            <cite>{{comment.sender}}</cite>
+<!--            <b class="sender">&#45;&#45; {{comment.sender}}</b>-->
+          </div>
           <div *ngIf="comment.type==='message'"  class="comment-image">
             <img  src="assets/images/{{comment.image}}" width="70px" alt="NONE" >
           </div>
