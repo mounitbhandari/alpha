@@ -11,7 +11,7 @@ export class VideoComponent implements OnInit {
   videoUrl = 'https://www.youtube.com/embed/_8kT9xbq5Vk';
   videoUrl2 = 'https://www.youtube.com/embed/x6Q7c9RyMzk';
   public safeURL: SafeResourceUrl;
-  safeURLArray: any[] = [];
+
 
   videos: any;
   constructor( private _sanitizer: DomSanitizer, private http: HttpClient) {
@@ -22,8 +22,10 @@ export class VideoComponent implements OnInit {
     this.http.get('assets/video-gallery.json').subscribe((data: any[]) => {
       this.videos = data;
       for (const video of this.videos){
-        this.safeURLArray.push(this._sanitizer.bypassSecurityTrustResourceUrl(video.url));
+        video.safeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(video.url);
+        // this.safeURLArray.push(this._sanitizer.bypassSecurityTrustResourceUrl(video.url));
       }
+      console.log(this.videos);
     });
   }
 
