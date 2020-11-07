@@ -1,24 +1,27 @@
 [
 
       {
-        "type": "video",
         "title": "my title",
         "url": "https://www.youtube.com/embed/_8kT9xbq5Vk"
       },
       {
-
-        "url": "https://www.youtube.com/embed/x6Q7c9RyMzk"
+        "title": "my title2",
+        "url": "https://www.youtube.com/embed/ZKOwZ5K8v34"
       },
       {
-        "url": "https://www.youtube.com/embed/ClAXd0itpsA"
+        "title": "my title3",
+        "url": "https://www.youtube.com/embed/O5lTQ2rxzms"
       },
       {
+        "title": "my title4",
         "url": "https://www.youtube.com/embed/_8kT9xbq5Vk"
       },
       {
+        "title": "my title5",
         "url": "https://www.youtube.com/embed/x6Q7c9RyMzk"
       },
       {
+        "title": "my title6",
         "url": "https://www.youtube.com/embed/ClAXd0itpsA"
       }
 ]
