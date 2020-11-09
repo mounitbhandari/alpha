@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isManager = false;
   isWorker = false;
   router: Router;
-  projectName='Alpha';
+  projectName='Cipudi';
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
