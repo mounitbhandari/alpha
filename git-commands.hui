@@ -58,3 +58,7 @@ git merge new-branch -m "merging and committing"
 # changes in branch
 
 
+
+
+git reset --hard HEAD~1
+
