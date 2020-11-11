@@ -11,6 +11,7 @@ import { faFacebook} from '@fortawesome/free-brands-svg-icons';
 import Swal from 'sweetalert2';
 import {MatDialog} from '@angular/material/dialog';
 import {ContactDialogComponent} from './contact-dialog/contact-dialog.component';
+import {Picture} from '../../models/picture.model';
 
 @Component({
   selector: 'app-contact',
@@ -24,9 +25,15 @@ export class ContactComponent implements OnInit {
   faAtom = faAtom;
   flicker = faFlickr;
   facebook = faFacebook;
+  employees: any;
+  myVar = 'url(\'https://live.staticflickr.com/65535/50589092182_ed29f409c4_t.jpg\')';
+
   constructor(private http: HttpClient, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.http.get('assets/contacts.json').subscribe((data: any[]) => {
+      this.employees = data;
+    });
   }
 // https://formspree.io
   onSubmit(contactForm: NgForm) {

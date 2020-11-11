@@ -39,89 +39,28 @@
 <div class="row">
 
 </div>
-
 <div fxLayout="row" fxLayoutAlign="space-evenly center" class="developer-div" style="padding-top: 20px; padding-bottom: 20px;">
-    <div class="col" fxFlex="20">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image-mounita"></div>
-          <mat-card-title>Mounita Bhandari</mat-card-title>
-          <mat-card-subtitle>Project Leader</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg" alt="Photo of M. Bhandari">
-        <mat-card-content>
-          <p>
-            She is our project leader, she design project and maintain it, she can work on different types of programming languages
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button (click)="goToLink('https://twitter.com/iammounita')"><fa-icon [icon]="twitter" style="color: dodgerblue;"></fa-icon> @iammounita</button>
-          <button mat-button (click)="goToLink('https://www.flickr.com/photos/190461213@N05/')"><fa-icon [icon]="flicker" style="color: dodgerblue;"></fa-icon> Flicker</button>
-          <button mat-button (click)="goToLink('https://www.facebook.com/profile.php?id=100013659720565')"><fa-icon [icon]="facebook" style="color: dodgerblue;"></fa-icon> FB</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-    <div class="col" fxFlex="20">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image-ritaja"></div>
-          <mat-card-title>Ritaja Ghosh</mat-card-title>
-          <mat-card-subtitle>Developer</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://live.staticflickr.com/65535/50426613873_1a28015ebc.jpg" alt="Photo of R. Ghosh">
-        <mat-card-content>
-          <p>
-            She is our project leader, she design project and maintain it, she can work on different types of programming languages
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button><fa-icon [icon]="twitter" style="color: dodgerblue;"></fa-icon> @iammounita</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-    <div class="col" fxFlex="20">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image-mou"></div>
-          <mat-card-title>Mou Podder</mat-card-title>
-          <mat-card-subtitle>Designer</mat-card-subtitle>
-        </mat-card-header>
-          <a [routerLink]="" (click)="openDialog()">
-            <img mat-card-image src="https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg" alt="Photo of M. Podder">
-          </a>
-        <mat-card-content>
-          <p>
-            She is our project leader, she design project and maintain it, she can work on different types of programming languages
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button><fa-icon [icon]="twitter" style="color: dodgerblue;"></fa-icon> @iammounita</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-    <div class="col" fxFlex="20">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image-namrata"></div>
-          <mat-card-title>Namrata Chakraborty</mat-card-title>
-          <mat-card-subtitle>Media Editor</mat-card-subtitle>
-        </mat-card-header>
-          <a [routerLink]="" (click)="openDialog()">
-            <img mat-card-image src="https://live.staticflickr.com/65535/50588186153_76e832983f.jpg" alt="Photo of M. Podder">
-          </a>
-        <mat-card-content>
-          <p>
-            She is our project leader, she design project and maintain it, she can work on different types of programming languages
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button><fa-icon [icon]="twitter" style="color: dodgerblue;"></fa-icon> @iammounita</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
+  <div class="col" fxFlex="20" *ngFor="let employee of employees">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + employee.avatar + ')','background-size': 'cover'}"></div>
+        <mat-card-title>{{employee.name}}</mat-card-title>
+        <mat-card-subtitle>{{employee.designation}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{employee.picture}}" alt="Photo">
+      <mat-card-content>
+        <p>
+          {{employee.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="goToLink(employee.twitter)"><fa-icon [icon]="twitter" style="color: dodgerblue;"></fa-icon> @{{employee.twitter_id}}</button>
+        <button mat-button (click)="goToLink(employee.flickr)"><fa-icon [icon]="flicker" style="color: dodgerblue;"></fa-icon> Flicker</button>
+        <button mat-button (click)="goToLink(employee.fb)"><fa-icon [icon]="facebook" style="color: dodgerblue;"></fa-icon> FB</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
+
 
 
