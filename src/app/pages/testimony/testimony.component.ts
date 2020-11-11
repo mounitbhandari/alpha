@@ -10,6 +10,7 @@ import {HttpClient} from '@angular/common/http';
 export class TestimonyComponent implements OnInit {
   comments: any ;
   x = 50;
+  avatar = 'https://live.staticflickr.com/65535/50589371316_538b56a864_o.jpg';
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
