@@ -24,9 +24,10 @@
             <cite>{{comment.sender}}</cite>
 <!--            <b class="sender">&#45;&#45; {{comment.sender}}</b>-->
           </div>
-          <div *ngIf="comment.type==='message'"  class="comment-image">
-            <img  src="assets/images/{{comment.image}}" width="70px" alt="NONE" >
-          </div>
+<!--          <div *ngIf="comment.type==='message'"  class="comment-image">-->
+<!--            <img  src="assets/images/{{comment.image}}" width="70px" alt="NONE" >-->
+<!--          </div>-->
+          <div *ngIf="comment.type==='message'" class="avatar" [ngStyle]="{'background-image': 'url(' + comment.avatar + ')','background-size': 'cover'}"></div>
         </div>
       </mat-card-content>
       <mat-card-actions>

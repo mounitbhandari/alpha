@@ -94,5 +94,11 @@ blockquote cite {
 blockquote cite:before {
   content: "\2014 \2009";
 }
-
+.avatar{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
 
