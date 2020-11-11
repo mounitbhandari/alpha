@@ -2,8 +2,16 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-  image?: string;
+  name: string;
+  designation: string;
+  description: string;
+  twitter_id: string;
+  twitter: string;
+  flickr: string;
+  fb: string;
+  avatar: string;
+  picture: string;
+  picture_dialog: string;
 }
 
 @Component({

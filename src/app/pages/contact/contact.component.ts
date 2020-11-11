@@ -62,11 +62,19 @@ export class ContactComponent implements OnInit {
   goToLink(url: string) {
     window.open(url, '_blank');
   }
-  openDialog() {
+  openDialog(employee: any) {
     const dialogRef = this.dialog.open(ContactDialogComponent, {
       data: {
-        animal: 'panda',
-        image: 'https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg'
+        name: employee.name,
+        designation: employee.designatio,
+        description: employee.description,
+        twitter_id: employee.twitter_id,
+        twitter: employee.twitter,
+        flickr: employee.flickr,
+        fb: employee.fb,
+        avatar: employee.avatar,
+        picture: employee.picture,
+        picture_dialog: employee.picture_dialog
       }
     });
 

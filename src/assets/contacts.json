@@ -10,7 +10,8 @@
         "flickr": "https://www.flickr.com/photos/190461213@N05/",
         "fb": "https://www.facebook.com/profile.php?id=100013659720565",
         "avatar": "https://live.staticflickr.com/65535/50428866602_46d4c90467_t.jpg",
-        "picture": "https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg"
+        "picture": "https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg",
+        "picture_dialog": "https://live.staticflickr.com/65535/50417121248_a4b0b080a9.jpg"
       },
       {
         "name": "Ritaja Ghosh",
@@ -21,7 +22,8 @@
         "flickr": "https://www.flickr.com/photos/190461213@N05/",
         "fb": "https://www.facebook.com/ritaja.ghosh.1",
         "avatar": "https://live.staticflickr.com/65535/50430195681_31dd7a8450_t.jpg",
-        "picture": "https://live.staticflickr.com/65535/50426613873_1a28015ebc.jpg"
+        "picture": "https://live.staticflickr.com/65535/50426613873_1a28015ebc.jpg",
+        "picture_dialog": "https://live.staticflickr.com/65535/50426613873_1a28015ebc.jpg"
       },
       {
         "name": "Mou Podder",
@@ -32,7 +34,8 @@
         "flickr": "https://www.flickr.com/photos/190461213@N05/",
         "fb": "https://www.facebook.com/ritaja.ghosh.1",
         "avatar": "https://live.staticflickr.com/65535/50429491113_65d8e59b62_t.jpg",
-        "picture": "https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg"
+        "picture": "https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg",
+        "picture_dialog": "https://live.staticflickr.com/65535/50422511783_12d452cce0.jpg"
       },
       {
       "name": "Namrata Chakraborty",
@@ -43,6 +46,7 @@
       "flickr": "https://www.flickr.com/photos/190461213@N05/",
       "fb": "https://www.facebook.com/ritaja.ghosh.1",
       "avatar": "https://live.staticflickr.com/65535/50589092182_ed29f409c4_t.jpg",
-      "picture": "https://live.staticflickr.com/65535/50588186153_76e832983f.jpg"
+      "picture": "https://live.staticflickr.com/65535/50588186153_76e832983f.jpg",
+      "picture_dialog": "https://live.staticflickr.com/65535/50588186153_76e832983f.jpg"
     }
 ]
