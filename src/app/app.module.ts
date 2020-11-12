@@ -40,6 +40,7 @@ import { VideoComponent } from './pages/video/video.component';
 import { ContactDialogComponent } from './pages/contact/contact-dialog/contact-dialog.component';
 import { GalleryDialogComponent } from './pages/gallery/gallery-dialog/gallery-dialog.component';
 import { TestimonyComponent } from './pages/testimony/testimony.component';
+import { TestimonyDialogComponent } from './pages/testimony/testimony-dialog/testimony-dialog.component';
 
 
 
@@ -63,7 +64,8 @@ import { TestimonyComponent } from './pages/testimony/testimony.component';
     VideoComponent,
     ContactDialogComponent,
     GalleryDialogComponent,
-    TestimonyComponent
+    TestimonyComponent,
+    TestimonyDialogComponent
   ],
   imports: [
     BrowserModule,

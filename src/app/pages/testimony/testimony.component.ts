@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Picture} from '../../models/picture.model';
 import {HttpClient} from '@angular/common/http';
+import {MatDialog} from '@angular/material/dialog';
+import {TestimonyDialogComponent} from './testimony-dialog/testimony-dialog.component';
 
 @Component({
   selector: 'app-testimony',
@@ -10,7 +12,7 @@ import {HttpClient} from '@angular/common/http';
 export class TestimonyComponent implements OnInit {
   comments: any ;
   sukantahui: any;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.http.get('assets/comments.json').subscribe((data: any[]) => {
@@ -22,5 +24,19 @@ export class TestimonyComponent implements OnInit {
       this.sukantahui = data;
     });
   }
+  openDialog(sukanta: any) {
+    const dialogRef = this.dialog.open(TestimonyDialogComponent, {
+      data: {
+        title: sukanta.title,
+        message1: sukanta.message1,
+        message2: sukanta.message2,
+        avatar: sukanta.avatar,
+        picture: sukanta.picture,
+      }
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
