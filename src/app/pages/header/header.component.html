@@ -1,4 +1,4 @@
-n<div class="navbar">
+<div class="navbar">
   <!--For Public-->
   <mat-toolbar [ngStyle]="myStyle()">
     <mat-toolbar-row fxLayoutAlign="space-between center">
@@ -35,8 +35,38 @@ n<div class="navbar">
                   [routerLinkActiveOptions]="{exact: true}">Contact Us
           </button>
         </div>
+        <div *ngIf="deviceXs">
+          <button mat-button [matMenuTriggerFor]="belowMenu">MENU</button>
+          <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item
+                    [routerLink]="['/']"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Home</button>
+            <button mat-menu-item
+                    [routerLink]="['/gallery']"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Gallery</button>
+
+            <button mat-menu-item
+                    [routerLink]="['/video']"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Video</button>
+
+            <button mat-menu-item
+                    [routerLink]="['/testimony']"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Testimony</button>
+
+            <button mat-menu-item
+                    [routerLink]="['/contactUs']"
+                    routerLinkActive="MyActiveMenu"
+                    [routerLinkActiveOptions]="{exact: true}">Contact Us</button>
+
+          </mat-menu>
+        </div>
 
 
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
+</div>
