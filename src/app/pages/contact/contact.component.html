@@ -1,4 +1,4 @@
-<div fxLayout="row" fxLayoutAlign="space-evenly stretch" style="padding-top: 20px; padding-bottom: 20px; background-color: #2a95e8;">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-evenly stretch" style="padding-top: 20px; padding-bottom: 20px; background-color: #2a95e8;">
   <div fxLayout="row" fxFlex="50" fxLayoutAlign="space-between center" class="form-container m-5 p-3">
     <form fxFlex="100"#contactForm="ngForm" >
         <div fxLayout="column" fxLayoutAlign="space-between">
@@ -40,8 +40,8 @@
 <div class="row">
 
 </div>
-<div fxLayout="row" fxLayoutAlign="space-evenly center" class="developer-div" style="padding-top: 20px; padding-bottom: 20px;">
-  <div class="col" fxFlex="20" *ngFor="let employee of employees">
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-evenly center" class="developer-div" style="padding-top: 20px; padding-bottom: 20px;">
+  <div class="col" fxFlex="{{!isDeviceXs? 20 : 100}}" *ngFor="let employee of employees">
     <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + employee.avatar + ')','background-size': 'cover'}"></div>

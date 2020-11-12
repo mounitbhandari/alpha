@@ -3,27 +3,33 @@
 
       {
         "title": "my title2",
-        "url": "https://www.youtube.com/embed/ZKOwZ5K8v34"
+        "url": "https://www.youtube.com/embed/ZKOwZ5K8v34",
+        "fxWidht": 32
       },
       {
         "title": "my title6",
-        "url": "https://www.youtube.com/embed/6blWf91E0OA"
+        "url": "https://www.youtube.com/embed/6blWf91E0OA",
+        "fxWidht": 32
       },
       {
         "title": "my title3",
-        "url": "https://www.youtube.com/embed/O5lTQ2rxzms"
+        "url": "https://www.youtube.com/embed/O5lTQ2rxzms",
+        "fxWidht": 32
       },
       {
         "title": "my title4",
-        "url": "https://www.youtube.com/embed/_8kT9xbq5Vk"
+        "url": "https://www.youtube.com/embed/_8kT9xbq5Vk",
+        "fxWidht": 32
       },
       {
-          "title": "my title5",
-          "url": "https://www.youtube.com/embed/K8SDPgHnFoc"
+        "title": "my title5",
+        "url": "https://www.youtube.com/embed/K8SDPgHnFoc",
+        "fxWidht": 32
       },
       {
         "title": "my title6",
-        "url": "https://www.youtube.com/embed/jvo6lPD1Dx4"
+        "url": "https://www.youtube.com/embed/jvo6lPD1Dx4",
+        "fxWidht": 32
       }
 
 
