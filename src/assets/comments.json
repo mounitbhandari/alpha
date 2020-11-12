@@ -161,9 +161,17 @@
     "picture": "no picture",
     "title": "",
     "message":"This line for you \nHappy birthday to you \nmany many happy returns of the day." ,
-    "sender": "Jiju",
+    "sender": "জিজু",
     "avatar": "https://live.staticflickr.com/65535/50590059673_6d9686ce9c_o.jpg",
     "image": "https://live.staticflickr.com/65535/50590059603_f6ee19f4e3.jpg",
     "fxWidht" : 32
-  }
+  },
+  "type": "message",
+  "picture": "no picture",
+  "title": "",
+  "message":"This line for you \nHappy birthday to you \nmany many happy returns of the day." ,
+  "sender": "জিজু",
+  "avatar": "https://live.staticflickr.com/65535/50590059673_6d9686ce9c_o.jpg",
+  "image": "https://live.staticflickr.com/65535/50590059603_f6ee19f4e3.jpg",
+  "fxWidht" : 32
 ]
