@@ -3,6 +3,7 @@ import {Picture} from '../../models/picture.model';
 import {HttpClient} from '@angular/common/http';
 import {MatDialog} from '@angular/material/dialog';
 import {TestimonyDialogComponent} from './testimony-dialog/testimony-dialog.component';
+import {CommonService} from '../../services/common.service';
 
 @Component({
   selector: 'app-testimony',
@@ -12,14 +13,15 @@ import {TestimonyDialogComponent} from './testimony-dialog/testimony-dialog.comp
 export class TestimonyComponent implements OnInit {
   comments: any ;
   sukantahui: any;
-  constructor(private http: HttpClient, public dialog: MatDialog) { }
+  isDeviceXs: boolean;
+  constructor(private http: HttpClient, public dialog: MatDialog, public common: CommonService) { }
 
   ngOnInit(): void {
     this.http.get('assets/comments.json').subscribe((data: any[]) => {
       this.comments = data;
       console.log(this.comments);
     });
-
+    this.isDeviceXs = this.common.isDeviceXs;
     this.http.get('assets/sukantahui.json').subscribe((data: any) => {
       this.sukantahui = data;
     });
