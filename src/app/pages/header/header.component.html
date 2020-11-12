@@ -6,7 +6,7 @@
         <button mat-button>
 <!--          <mat-icon>home</mat-icon>-->
           <img src="assets/images/ctt.png" width="40px">
-          <span class="logo">{{projectName}}</span>
+          <span *ngIf="!deviceXs" class="logo">{{projectName}}</span>
         </button>
         <div *ngIf="!deviceXs">
           <button mat-button
@@ -36,7 +36,8 @@
           </button>
         </div>
         <div *ngIf="deviceXs">
-          <button mat-button [matMenuTriggerFor]="belowMenu">MENU</button>
+
+          <button mat-button [matMenuTriggerFor]="belowMenu">Menu<mat-icon>more_vert</mat-icon></button>
           <mat-menu #belowMenu="matMenu" yPosition="below">
             <button mat-menu-item
                     [routerLink]="['/']"
