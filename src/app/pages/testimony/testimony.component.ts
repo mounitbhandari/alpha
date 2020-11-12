@@ -31,7 +31,7 @@ export class TestimonyComponent implements OnInit {
         message1: sukanta.message1,
         message2: sukanta.message2,
         avatar: sukanta.avatar,
-        picture: sukanta.picture,
+        picture: sukanta.picture
       }
     });
 
