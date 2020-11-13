@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {CommonService} from "../../services/common.service";
 
 
 @Component({
@@ -18,9 +19,10 @@ export class HomeComponent implements OnInit {
   radius: number;
   color: string;
   images = [1, 2, 3, 4, 5, 6].map((n) => `assets/carousel/carousel_${n}.jpg`);
-  
-  constructor(private httpClient: HttpClient) {
-    
+  isDeviceXs: boolean;
+
+  constructor(private httpClient: HttpClient, public common: CommonService) {
+
   }
 
   ngOnInit(){
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit {
       console.log(data);
       this.products = data;
     });
+    this.isDeviceXs = this.common.isDeviceXs;
   }
 
 }
